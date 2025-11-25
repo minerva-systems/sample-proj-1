@@ -1,5 +1,6 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Flame, UtensilsCrossed, Clock, Star } from "lucide-react";
+import { BASE } from "../utils/paths";
 
 export function Home() {
   const features = [
@@ -42,7 +43,7 @@ export function Home() {
             Experience the Authentic Korean BBQ Tradition
           </p>
           <a
-            href="/menu/bbq"
+            href={`${BASE}/menu/bbq`}
             className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded transition-colors"
           >
             View Our Menu
@@ -116,7 +117,7 @@ export function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/menu/bbq"
+              href={`${BASE}/menu/bbq`}
               className="inline-block bg-white text-red-600 px-8 py-4 rounded hover:bg-gray-100 transition-colors"
             >
               Browse Menu

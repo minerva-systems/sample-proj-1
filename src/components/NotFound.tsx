@@ -1,3 +1,5 @@
+import { BASE } from "../utils/paths";
+
 export function NotFound() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4">
@@ -8,7 +10,7 @@ export function NotFound() {
           The page you're looking for doesn't exist.
         </p>
         <a
-          href="/"
+          href={BASE}
           className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded transition-colors"
         >
           Go Home

@@ -1,5 +1,6 @@
 import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
+import { BASE } from "../utils/paths";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -14,15 +15,15 @@ export function Layout({ children }: LayoutProps) {
   }, []);
 
   const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/menu/bbq", label: "BBQ Menu" },
-    { path: "/menu/appetizers", label: "Appetizers" },
-    { path: "/menu/drinks", label: "Drinks" },
-    { path: "/menu/desserts", label: "Desserts" },
+    { path: BASE, label: "Home" },
+    { path: `${BASE}/menu/bbq`, label: "BBQ Menu" },
+    { path: `${BASE}/menu/appetizers`, label: "Appetizers" },
+    { path: `${BASE}/menu/drinks`, label: "Drinks" },
+    { path: `${BASE}/menu/desserts`, label: "Desserts" },
   ];
 
   const isActive = (path: string) => {
-    if (path === "/") return currentPath === "/";
+    if (path === BASE) return currentPath === BASE || currentPath === `${BASE}/`;
     return currentPath.startsWith(path);
   };
 
@@ -32,7 +33,7 @@ export function Layout({ children }: LayoutProps) {
       <header className="bg-black text-white sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
-            <a href="/" className="text-2xl tracking-wide">
+            <a href={BASE} className="text-2xl tracking-wide">
               KBBQ HOUSE
             </a>
 
