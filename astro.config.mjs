@@ -13,7 +13,7 @@ export default defineConfig({
   ],
   output: 'static',
   site: 'https://minerva-systems.github.io',
-  base: '/sample-proj-1',
+  base: '/',
   server: {
     port: 3000,
     open: true,
