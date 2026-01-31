@@ -11,7 +11,7 @@ export function NotFound() {
         </p>
         <a
           href={BASE}
-          className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded transition-colors"
+          className="inline-block bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded transition-colors"
         >
           Go Home
         </a>

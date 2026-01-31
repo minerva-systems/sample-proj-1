@@ -2,67 +2,191 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { LocationSection } from "./LocationSection";
 
 interface MenuPageProps {
-  category: "bbq" | "appetizers" | "drinks" | "desserts";
+  category: "sushi" | "starters" | "drinks" | "desserts";
 }
 
 export function MenuPage({ category }: MenuPageProps) {
   const menuData = {
-    bbq: {
-      title: "BBQ Menu",
-      description: "Premium cuts grilled to perfection at your table",
-      image: "https://images.unsplash.com/photo-1702741168115-cd3d9a682972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwbWVhdCUyMGJicXxlbnwxfHx8fDE3NjQwMjgyMzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    sushi: {
+      title: "Sushi & Sashimi",
+      description: "Fresh, bright flavors from the sushi bar",
+      image:
+        "https://images.unsplash.com/photo-1541542684-4d33b4b9f3eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXNoaSUyMHBsYXRlcnxlbnwxfHx8fDE3NjgxNzY4MDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       items: [
-        { name: "Galbi (Short Ribs)", price: "$32.99", description: "Marinated beef short ribs with signature sauce" },
-        { name: "Bulgogi", price: "$28.99", description: "Thinly sliced marinated beef" },
-        { name: "Samgyeopsal", price: "$26.99", description: "Premium pork belly slices" },
-        { name: "Chadol (Beef Brisket)", price: "$29.99", description: "Thinly sliced beef brisket" },
-        { name: "Spicy Pork", price: "$25.99", description: "Spicy marinated pork shoulder" },
-        { name: "Chicken", price: "$24.99", description: "Marinated chicken thigh" },
-        { name: "Shrimp", price: "$30.99", description: "Jumbo shrimp with garlic butter" },
-        { name: "Combo Platter", price: "$58.99", description: "Assortment of beef, pork, and chicken" },
+        {
+          name: "Chef's Nigiri Set",
+          price: "$24.99",
+          description: "Assorted daily nigiri with seasonal fish",
+        },
+        {
+          name: "Sashimi Deluxe",
+          price: "$28.99",
+          description: "Thick-cut sashimi with fresh wasabi",
+        },
+        {
+          name: "Salmon Lovers",
+          price: "$22.99",
+          description: "Salmon nigiri, sashimi, and toro roll",
+        },
+        {
+          name: "Tuna Trio",
+          price: "$25.99",
+          description: "Akami, spicy tuna roll, and seared tuna",
+        },
+        {
+          name: "Vegetable Roll",
+          price: "$9.99",
+          description: "Cucumber, avocado, and kampyo",
+        },
+        {
+          name: "California Roll",
+          price: "$10.99",
+          description: "Crab, avocado, and cucumber",
+        },
+        {
+          name: "Dragon Roll",
+          price: "$16.99",
+          description: "Eel, avocado, and sweet soy glaze",
+        },
+        {
+          name: "Spicy Tuna Roll",
+          price: "$12.99",
+          description: "Tuna, chili, and crunchy tempura flakes",
+        },
       ],
     },
-    appetizers: {
-      title: "Appetizers",
-      description: "Start your meal with authentic Korean starters",
-      image: "https://images.unsplash.com/photo-1709433420624-832e2264c346?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBzaWRlJTIwZGlzaGVzfGVufDF8fHx8MTc2NDAyODIzOHww&ixlib=rb-4.1.0&q=80&w=1080",
+    starters: {
+      title: "Starters",
+      description: "Light bites to open your meal",
+      image:
+        "https://images.unsplash.com/photo-1607301405390-d831c242f59b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaXNvJTIwc291cHxlbnwxfHx8fDE3NjgxNzY4NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       items: [
-        { name: "Kimchi Pancake", price: "$12.99", description: "Crispy pancake with fermented kimchi" },
-        { name: "Seafood Pancake", price: "$14.99", description: "Mixed seafood and scallions" },
-        { name: "Mandu (Dumplings)", price: "$10.99", description: "Steamed or fried pork dumplings" },
-        { name: "Japchae", price: "$13.99", description: "Stir-fried glass noodles with vegetables" },
-        { name: "Tteokbokki", price: "$11.99", description: "Spicy rice cakes" },
-        { name: "Korean Fried Chicken", price: "$15.99", description: "Crispy wings with choice of sauce" },
-        { name: "Kimchi", price: "$5.99", description: "House-made fermented cabbage" },
-        { name: "Banchan Set", price: "$8.99", description: "Assorted Korean side dishes" },
+        {
+          name: "Miso Soup",
+          price: "$3.99",
+          description: "Tofu, scallions, and wakame",
+        },
+        {
+          name: "Edamame",
+          price: "$5.99",
+          description: "Steamed soybeans with sea salt",
+        },
+        {
+          name: "Gyoza",
+          price: "$8.99",
+          description: "Pan-seared pork dumplings with ponzu",
+        },
+        {
+          name: "Shrimp Tempura",
+          price: "$12.99",
+          description: "Crispy shrimp with tentsuyu dip",
+        },
+        {
+          name: "Crispy Calamari",
+          price: "$11.99",
+          description: "Lightly fried with spicy mayo",
+        },
+        {
+          name: "Seaweed Salad",
+          price: "$6.99",
+          description: "Sesame vinaigrette and tobiko",
+        },
+        {
+          name: "Agedashi Tofu",
+          price: "$9.99",
+          description: "Silky tofu with dashi broth",
+        },
+        {
+          name: "Takoyaki",
+          price: "$10.99",
+          description: "Octopus fritters with savory sauce",
+        },
       ],
     },
     drinks: {
       title: "Drinks",
-      description: "Refresh yourself with our beverage selection",
-      image: "https://images.unsplash.com/photo-1629642621587-9947ce328799?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBmb29kJTIwcmVzdGF1cmFudHxlbnwxfHx8fDE3NjM5NDY1NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      description: "Sake, tea, and refreshing favorites",
+      image:
+        "https://images.unsplash.com/photo-1527169402691-feff5539e52c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWtlJTIwY2FycGxhZmV8ZW58MXx8fHwxNzY4MTc2OTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       items: [
-        { name: "Soju", price: "$12.99", description: "Korean distilled spirit - Original or Flavored" },
-        { name: "Makgeolli", price: "$14.99", description: "Traditional Korean rice wine" },
-        { name: "Korean Beer", price: "$6.99", description: "Hite, Cass, or OB" },
-        { name: "Soju Cocktail", price: "$10.99", description: "Soju mixed with fresh fruit juice" },
-        { name: "Green Tea", price: "$3.99", description: "Hot or iced" },
-        { name: "Korean Citron Tea", price: "$4.99", description: "Sweet yuzu tea" },
-        { name: "Soft Drinks", price: "$2.99", description: "Coke, Sprite, or Fanta" },
-        { name: "Bottled Water", price: "$1.99", description: "Spring water" },
+        {
+          name: "Hot Green Tea",
+          price: "$2.99",
+          description: "Traditional sencha",
+        },
+        {
+          name: "Iced Jasmine Tea",
+          price: "$3.99",
+          description: "Light floral notes",
+        },
+        {
+          name: "Sparkling Yuzu Soda",
+          price: "$4.99",
+          description: "Citrus-forward and refreshing",
+        },
+        {
+          name: "House Sake",
+          price: "$8.99",
+          description: "Warm or chilled",
+        },
+        {
+          name: "Junmai Sake",
+          price: "$12.99",
+          description: "Clean, dry finish",
+        },
+        {
+          name: "Japanese Lager",
+          price: "$6.99",
+          description: "Light and crisp",
+        },
+        {
+          name: "Lychee Lemonade",
+          price: "$4.99",
+          description: "Sweet tropical twist",
+        },
+        {
+          name: "Sparkling Water",
+          price: "$2.99",
+          description: "Still or sparkling",
+        },
       ],
     },
     desserts: {
       title: "Desserts",
-      description: "Sweet endings to your meal",
-      image: "https://images.unsplash.com/photo-1677367306400-d090b5ab52d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBiYnElMjBncmlsbHxlbnwxfHx8fDE3NjQwMTMxMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      description: "Sweet bites to close your meal",
+      image:
+        "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtb2NoaSUyMGljZSUyMGNyZWFtfGVufDF8fHx8MTc2ODE3Njk0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       items: [
-        { name: "Bingsu", price: "$12.99", description: "Korean shaved ice with sweet toppings" },
-        { name: "Mochi Ice Cream", price: "$7.99", description: "Assorted flavors (3 pieces)" },
-        { name: "Hotteok", price: "$6.99", description: "Sweet Korean pancake with cinnamon filling" },
-        { name: "Green Tea Ice Cream", price: "$5.99", description: "Premium matcha ice cream" },
-        { name: "Fresh Fruit Platter", price: "$8.99", description: "Seasonal fruits" },
-        { name: "Korean Rice Cake", price: "$6.99", description: "Traditional tteok dessert" },
+        {
+          name: "Mochi Ice Cream",
+          price: "$7.99",
+          description: "Assorted flavors (3 pieces)",
+        },
+        {
+          name: "Matcha Ice Cream",
+          price: "$6.99",
+          description: "Premium green tea",
+        },
+        {
+          name: "Tempura Ice Cream",
+          price: "$8.99",
+          description: "Lightly fried with strawberry drizzle",
+        },
+        {
+          name: "Sesame Panna Cotta",
+          price: "$7.99",
+          description: "Black sesame with berry sauce",
+        },
+        {
+          name: "Yuzu Sorbet",
+          price: "$6.99",
+          description: "Bright citrus finish",
+        },
+        {
+          name: "Seasonal Fruit",
+          price: "$5.99",
+          description: "Chef's daily selection",
+        },
       ],
     },
   };
@@ -99,7 +223,7 @@ export function MenuPage({ category }: MenuPageProps) {
                   <h3 className="mb-2">{item.name}</h3>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
-                <div className="text-red-600 whitespace-nowrap">
+                <div className="text-rose-600 whitespace-nowrap">
                   {item.price}
                 </div>
               </div>
@@ -108,8 +232,8 @@ export function MenuPage({ category }: MenuPageProps) {
 
           <div className="mt-12 p-6 bg-gray-50 rounded-lg">
             <p className="text-center text-gray-700">
-              All BBQ items come with complimentary lettuce wraps, ssamjang,
-              sesame oil with salt, and a selection of banchan (side dishes).
+              Menu items and availability may vary. Ask your server about
+              seasonal sushi and chef specials.
             </p>
           </div>
         </div>

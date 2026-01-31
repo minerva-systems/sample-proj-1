@@ -1,52 +1,59 @@
+import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Flame, UtensilsCrossed, Clock, Star } from "lucide-react";
-import { BASE } from "../utils/paths";
+import { MapPin, Phone, Sparkles, Star } from "lucide-react";
 
 export function Home() {
   const features = [
     {
-      icon: Flame,
-      title: "Premium Quality",
-      description: "Finest cuts of meat, carefully selected for the perfect BBQ experience",
-    },
-    {
-      icon: UtensilsCrossed,
-      title: "Traditional Recipes",
-      description: "Authentic Korean marinades and side dishes prepared daily",
-    },
-    {
-      icon: Clock,
-      title: "All You Can Eat",
-      description: "Unlimited options with our signature AYCE menu",
+      icon: Sparkles,
+      title: "Fresh Sushi Bar",
+      description:
+        "Seasonal fish, bright flavors, and handcrafted rolls prepared to order",
     },
     {
       icon: Star,
-      title: "Premium Service",
-      description: "Attentive staff to help you grill to perfection",
+      title: "Signature Rolls",
+      description:
+        "House rolls layered with bright flavors and premium ingredients",
+    },
+    {
+      icon: MapPin,
+      title: "Natomas Neighborhood",
+      description:
+        "Easy to find and perfect for lunch, dinner, or a quick happy-hour stop",
+    },
+    {
+      icon: Phone,
+      title: "Dine In or Takeout",
+      description:
+        "Comfortable dining room with quick pickup options for busy nights",
     },
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center">
+      <section className="relative h-[620px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1677367306400-d090b5ab52d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBiYnElMjBncmlsbHxlbnwxfHx8fDE3NjQwMTMxMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Korean BBQ Grill"
+            src="https://images.unsplash.com/photo-1541542684-4d33b4b9f3eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXNoaSUyMHJlc3RhdXJhbnR8ZW58MXx8fHwxNzY4MTc2NDA2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Sushi dining"
             className="w-full h-full object-cover opacity-60"
           />
         </div>
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-7xl mb-6">Welcome to KBBQ HOUSE</h1>
+          <p className="uppercase tracking-[0.3em] text-sm md:text-base mb-4 text-white/80">
+            Susiho
+          </p>
+          <h1 className="text-5xl md:text-7xl mb-6">Natomas, Sacramento</h1>
           <p className="text-xl md:text-2xl mb-8">
-            Experience the Authentic Korean BBQ Tradition
+            Sushi bar favorites in a warm, modern space
           </p>
           <a
-            href={`${BASE}/menu/bbq`}
-            className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded transition-colors"
+            href="https://www.yelp.com/biz/harumi-sushi-and-hibachi-natomas-sacramento-11"
+            className="inline-block bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 rounded transition-colors"
           >
-            View Our Menu
+            View on Yelp
           </a>
         </div>
       </section>
@@ -54,12 +61,12 @@ export function Home() {
       {/* Features Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-center mb-12">Why Choose Us</h2>
+          <h2 className="text-center mb-12">Why Locals Love Susiho</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
-                  <feature.icon className="w-8 h-8 text-red-600" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-rose-100 rounded-full mb-4">
+                  <feature.icon className="w-8 h-8 text-rose-600" />
                 </div>
                 <h3 className="mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -72,36 +79,36 @@ export function Home() {
       {/* Image Gallery Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-center mb-12">Our Specialties</h2>
+          <h2 className="text-center mb-12">Signature Moments</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="relative h-80 overflow-hidden rounded-lg">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1702741168115-cd3d9a682972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwbWVhdCUyMGJicXxlbnwxfHx8fDE3NjQwMjgyMzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Grilled BBQ"
+                src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWJhY2hpJTIwZ3JpbGx8ZW58MXx8fHwxNzY4MTc2NTIwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Sushi chef plating"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <p className="text-white p-6">Premium BBQ Cuts</p>
+                <p className="text-white p-6">Chef's Specials</p>
               </div>
             </div>
             <div className="relative h-80 overflow-hidden rounded-lg">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1629642621587-9947ce328799?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBmb29kJTIwcmVzdGF1cmFudHxlbnwxfHx8fDE3NjM5NDY1NTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Korean Food"
+                src="https://images.unsplash.com/photo-1563612116625-3012372fccce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXNoaSUyMHBsYXR0ZXJ8ZW58MXx8fHwxNzY4MTc2NTU2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Sushi platter"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <p className="text-white p-6">Traditional Korean Dishes</p>
+                <p className="text-white p-6">Sushi Bar Staples</p>
               </div>
             </div>
             <div className="relative h-80 overflow-hidden rounded-lg">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1709433420624-832e2264c346?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBzaWRlJTIwZGlzaGVzfGVufDF8fHx8MTc2NDAyODIzOHww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Korean Side Dishes"
+                src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqYXBhbmVzZSUyMHJlc3RhdXJhbnQlMjBpbmVyaW9yfGVufDF8fHx8MTc2ODE3NjYwOHww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Dining room interior"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <p className="text-white p-6">Fresh Banchan</p>
+                <p className="text-white p-6">Relaxed Dining Room</p>
               </div>
             </div>
           </div>
@@ -109,24 +116,24 @@ export function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-red-600 text-white">
+      <section className="py-16 bg-rose-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-6">Ready to Experience KBBQ?</h2>
+          <h2 className="mb-6">Plan Your Susiho Night Out</h2>
           <p className="text-xl mb-8">
-            Visit us today and enjoy the finest Korean BBQ in town
+            Explore menus, photos, and the latest hours on Yelp.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={`${BASE}/menu/bbq`}
-              className="inline-block bg-white text-red-600 px-8 py-4 rounded hover:bg-gray-100 transition-colors"
+              href="https://www.yelp.com/biz/harumi-sushi-and-hibachi-natomas-sacramento-11"
+              className="inline-block bg-white text-rose-600 px-8 py-4 rounded hover:bg-gray-100 transition-colors"
             >
-              Browse Menu
+              See Yelp Details
             </a>
             <a
-              href="tel:5551234567"
-              className="inline-block border-2 border-white px-8 py-4 rounded hover:bg-white hover:text-red-600 transition-colors"
+              href="https://www.yelp.com/biz/harumi-sushi-and-hibachi-natomas-sacramento-11"
+              className="inline-block border-2 border-white px-8 py-4 rounded hover:bg-white hover:text-rose-600 transition-colors"
             >
-              Call to Reserve
+              Get Directions
             </a>
           </div>
         </div>
