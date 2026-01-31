@@ -1,6 +1,7 @@
 import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { MapPin, Phone, Sparkles, Star } from "lucide-react";
+import { BASE } from "../utils/paths";
 
 export function Home() {
   const features = [
@@ -36,7 +37,7 @@ export function Home() {
       <section className="relative h-[620px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1541542684-4d33b4b9f3eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXNoaSUyMHJlc3RhdXJhbnR8ZW58MXx8fHwxNzY4MTc2NDA2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+            src={`${BASE}/salmon_sushi.jpg`}
             alt="Sushi dining"
             className="w-full h-full object-cover opacity-60"
           />
@@ -45,7 +46,7 @@ export function Home() {
           <p className="uppercase tracking-[0.3em] text-sm md:text-base mb-4 text-white/80">
             Susiho
           </p>
-          <h1 className="text-5xl md:text-7xl mb-6">Natomas, Sacramento</h1>
+          <h1 className="text-5xl md:text-7xl mb-6">Harumi Sushi & Hibachi Natomas</h1>
           <p className="text-xl md:text-2xl mb-8">
             Sushi bar favorites in a warm, modern space
           </p>
@@ -83,8 +84,8 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="relative h-80 overflow-hidden rounded-lg">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWJhY2hpJTIwZ3JpbGx8ZW58MXx8fHwxNzY4MTc2NTIwfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Sushi chef plating"
+                src={`${BASE}/salmon_tail_sushi.jpg`}
+                alt="Salmon tail sushi"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
@@ -93,8 +94,8 @@ export function Home() {
             </div>
             <div className="relative h-80 overflow-hidden rounded-lg">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1563612116625-3012372fccce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXNoaSUyMHBsYXR0ZXJ8ZW58MXx8fHwxNzY4MTc2NTU2fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Sushi platter"
+                src={`${BASE}/smoked_salmon.jpg`}
+                alt="Smoked salmon sushi"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
@@ -103,12 +104,12 @@ export function Home() {
             </div>
             <div className="relative h-80 overflow-hidden rounded-lg">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxqYXBhbmVzZSUyMHJlc3RhdXJhbnQlMjBpbmVyaW9yfGVufDF8fHx8MTc2ODE3NjYwOHww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Dining room interior"
+                src={`${BASE}/salmon_sushi.jpg`}
+                alt="Salmon sushi"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                <p className="text-white p-6">Relaxed Dining Room</p>
+                <p className="text-white p-6">Nigiri sushi </p>
               </div>
             </div>
           </div>

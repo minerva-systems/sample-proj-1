@@ -18,8 +18,7 @@ export function Layout({ children }: LayoutProps) {
     { path: BASE, label: "Home" },
     { path: `${BASE}/menu/sushi`, label: "Sushi & Sashimi" },
     { path: `${BASE}/menu/starters`, label: "Starters" },
-    { path: `${BASE}/menu/drinks`, label: "Drinks" },
-    { path: `${BASE}/menu/desserts`, label: "Desserts" },
+    { path: `${BASE}/menu/drinks`, label: "Drinks & Desserts" },
   ];
 
   const isActive = (path: string) => {

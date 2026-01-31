@@ -1,3 +1,4 @@
+import React from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface Location {
@@ -37,11 +38,11 @@ export function LocationSection() {
           Sushi nights made easy with quick directions and live updates
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto justify-items-center">
           {locations.map((location, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
+              className="bg-white rounded-lg shadow-lg overflow-hidden w-full"
             >
               {/* Location Image */}
               <div className="p-8 text-center border-b">
@@ -52,7 +53,7 @@ export function LocationSection() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 text-center">
                   <p className="text-gray-800">{location.address}</p>
                   <p className="text-gray-800">{location.city}</p>
                   <a
