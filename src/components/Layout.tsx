@@ -16,10 +16,9 @@ export function Layout({ children }: LayoutProps) {
 
   const navItems = [
     { path: BASE, label: "Home" },
-    { path: `${BASE}/menu/bbq`, label: "BBQ Menu" },
-    { path: `${BASE}/menu/appetizers`, label: "Appetizers" },
-    { path: `${BASE}/menu/drinks`, label: "Drinks" },
-    { path: `${BASE}/menu/desserts`, label: "Desserts" },
+    { path: `${BASE}/menu/sushi`, label: "Sushi & Sashimi" },
+    { path: `${BASE}/menu/starters`, label: "Starters" },
+    { path: `${BASE}/menu/drinks`, label: "Drinks & Desserts" },
   ];
 
   const isActive = (path: string) => {
@@ -34,7 +33,7 @@ export function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             <a href={BASE} className="text-2xl tracking-wide">
-              KBBQ HOUSE
+              Susiho
             </a>
 
             {/* Desktop Navigation */}
@@ -43,8 +42,8 @@ export function Layout({ children }: LayoutProps) {
                 <a
                   key={item.path}
                   href={item.path}
-                  className={`transition-colors hover:text-red-500 ${
-                    isActive(item.path) ? "text-red-500" : ""
+                  className={`transition-colors hover:text-rose-400 ${
+                    isActive(item.path) ? "text-rose-400" : ""
                   }`}
                 >
                   {item.label}
@@ -69,8 +68,8 @@ export function Layout({ children }: LayoutProps) {
                   key={item.path}
                   href={item.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`transition-colors hover:text-red-500 ${
-                    isActive(item.path) ? "text-red-500" : ""
+                  className={`transition-colors hover:text-rose-400 ${
+                    isActive(item.path) ? "text-rose-400" : ""
                   }`}
                 >
                   {item.label}
@@ -91,26 +90,30 @@ export function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="mb-4">KBBQ HOUSE</h3>
+              <h3 className="mb-4">Susiho</h3>
               <p className="text-gray-400">
-                Authentic Korean BBQ Experience
+                Sushi bar favorites and chef specials
               </p>
             </div>
             <div>
               <h4 className="mb-4">Hours</h4>
-              <p className="text-gray-400">Mon-Thu: 11:30 AM - 10:00 PM</p>
-              <p className="text-gray-400">Fri-Sat: 11:30 AM - 11:00 PM</p>
-              <p className="text-gray-400">Sunday: 12:00 PM - 9:00 PM</p>
+              <p className="text-gray-400">See Yelp for current hours</p>
+              <p className="text-gray-400">Holiday hours may vary</p>
             </div>
             <div>
               <h4 className="mb-4">Contact</h4>
-              <p className="text-gray-400">123 BBQ Street</p>
-              <p className="text-gray-400">Phone: (555) 123-4567</p>
-              <p className="text-gray-400">info@kbbqhouse.com</p>
+              <p className="text-gray-400">3541 Truxel Rd</p>
+              <p className="text-gray-400">Sacramento, CA 95834</p>
+              <a
+                className="text-gray-400 hover:text-white transition-colors"
+                href="https://www.yelp.com/biz/harumi-sushi-and-hibachi-natomas-sacramento-11"
+              >
+                View Yelp listing
+              </a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2025 KBBQ House. All rights reserved.</p>
+            <p>&copy; 2025 Susiho. All rights reserved.</p>
           </div>
         </div>
       </footer>
