@@ -20,7 +20,11 @@ export function LocationSection() {
         "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxqYXBhbmVzZSUyMHJlc3RhdXJhbnQlMjBpbmVyaW9yfGVufDF8fHx8MTc2ODE3NjYwOHww&ixlib=rb-4.1.0&q=80&w=1080",
       address: "3541 Truxel Rd",
       city: "Sacramento, CA 95834",
-      hours: ["See Yelp for current hours"],
+      hours: [
+        "Monday - Thursday: 11:00 AM - 9:00 PM",
+        "Friday - Saturday: 11:00 AM - 10:00 PM",
+        "Sunday: 11:00 AM - 9:00 PM",
+      ],
       mapEmbedUrl:
         "https://www.google.com/maps?q=3541+Truxel+Rd+Sacramento+CA+95834&output=embed",
       directionsUrl:

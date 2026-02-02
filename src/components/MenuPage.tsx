@@ -594,7 +594,7 @@ export function MenuPage({ category }: MenuPageProps) {
       </section>
 
       {/* Location Section */}
-      <LocationSection />
+      {category !== "drinks" && <LocationSection />}
     </div>
   );
 }
