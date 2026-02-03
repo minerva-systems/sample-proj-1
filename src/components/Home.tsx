@@ -35,12 +35,12 @@ export function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[700px] md:h-[800px]">
+      <section className="relative h-[400px] md:h-[800px]">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src={`${BASE}/salmon_sushi.jpg`}
+            src={`${BASE}/sushi-black-plate-aesthetic-look_629685-13756.avif`}
             alt="Harumi Sushi & Hibachi"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </div>
       </section>
