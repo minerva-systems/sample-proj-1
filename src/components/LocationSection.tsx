@@ -6,6 +6,7 @@ interface Location {
   image: string;
   address: string;
   city: string;
+  phone: string;
   hours: string[];
   mapEmbedUrl: string;
   directionsUrl: string;
@@ -20,6 +21,7 @@ export function LocationSection() {
         "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxqYXBhbmVzZSUyMHJlc3RhdXJhbnQlMjBpbmVyaW9yfGVufDF8fHx8MTc2ODE3NjYwOHww&ixlib=rb-4.1.0&q=80&w=1080",
       address: "3541 Truxel Rd",
       city: "Sacramento, CA 95834",
+      phone: "(916) 246-6777",
       hours: [
         "Monday - Thursday: 11:00 AM - 9:00 PM",
         "Friday - Saturday: 11:00 AM - 10:00 PM",
@@ -35,12 +37,9 @@ export function LocationSection() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-10 md:py-12 bg-rose-600 text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-center mb-4">Visit Us in Natomas</h2>
-        <p className="text-center text-gray-600 mb-12">
-          Sushi nights made easy with quick directions and live updates
-        </p>
+        <h2 className="text-center mb-4 text-white">Visit Us in Natomas</h2>
 
         <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto justify-items-center">
           {locations.map((location, index) => (
@@ -60,6 +59,9 @@ export function LocationSection() {
                 <div className="space-y-2 text-center">
                   <p className="text-gray-800">{location.address}</p>
                   <p className="text-gray-800">{location.city}</p>
+                  <a href={`tel:${location.phone.replace(/\D/g, "")}`} className="text-gray-800 hover:text-rose-600 block">
+                    {location.phone}
+                  </a>
                   <a
                     href={location.yelpUrl}
                     className="text-gray-600 hover:text-rose-600 inline-block"

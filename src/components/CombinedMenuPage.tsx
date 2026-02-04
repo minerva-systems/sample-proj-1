@@ -3,16 +3,19 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { BASE } from "../utils/paths";
 
 export function CombinedMenuPage() {
+  // Responsive offset: smaller below laptop to avoid gap; full offset on laptop+
+  const getScrollOffset = () =>
+    typeof window !== "undefined" && window.innerWidth >= 1024 ? 200 : 140;
+
   useEffect(() => {
-    // Handle smooth scroll when hash changes
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (hash) {
         const element = document.querySelector(hash);
         if (element) {
-          const headerOffset = 80;
+          const offset = getScrollOffset();
           const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
 
           window.scrollTo({
             top: offsetPosition,
@@ -22,13 +25,9 @@ export function CombinedMenuPage() {
       }
     };
 
-    // Handle initial hash on load
     handleHashChange();
     window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
+    return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
   const menuData = {
@@ -598,15 +597,14 @@ export function CombinedMenuPage() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = 80;
+      const offset = getScrollOffset();
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
 
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
       });
-      // Update URL hash without triggering scroll
       window.history.pushState(null, "", `#${sectionId}`);
     }
   };
@@ -614,7 +612,7 @@ export function CombinedMenuPage() {
   return (
     <div>
       {/* Tabs Navigation */}
-      <section className="sticky top-[80px] z-40 bg-white border-b border-gray-200 shadow-sm w-full">
+      <section className="sticky top-28 lg:top-32 z-40 bg-white border-b border-gray-200 shadow-sm w-full">
         <div className="container mx-auto px-4">
           <div className="flex justify-center gap-4 md:gap-8 py-4">
             {menuSections.map((section) => (
@@ -664,7 +662,7 @@ export function CombinedMenuPage() {
 
       {/* Menu Sections */}
       {menuSections.map((menu, index) => (
-        <div key={menu.key} id={menu.key}>
+        <div key={menu.key} id={menu.key} className="scroll-mt-36 lg:scroll-mt-[200px]">
           {/* Hero Section for each menu category */}
           <section className="relative h-[400px] flex items-center justify-center">
             <div className="absolute inset-0 bg-black">
